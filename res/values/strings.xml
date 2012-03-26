@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, FlyingColorsPlayerAidActivity!</string>
     <string name="app_name">FlyingColorsPlayerAid</string>
-
+    <string name="rate_label">Rate:</string>
+    <string name="nationality_label">Nationality:</string>
+    <string name="year_label">Year:</string>
+    <string name="range_label">Range:</string>
+    
 </resources>

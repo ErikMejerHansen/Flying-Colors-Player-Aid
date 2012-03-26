@@ -19,6 +19,6 @@
             </intent-filter>
         </activity>
     </application>
-<uses-permission
-        android:name="android.permission.INTERNET" />
+    <!-- Internet permission only here to enable testing with calabash -->
+<uses-permission android:name="android.permission.INTERNET" />
 </manifest>

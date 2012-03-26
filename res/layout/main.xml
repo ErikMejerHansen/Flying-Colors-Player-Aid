@@ -2,11 +2,64 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:padding="4dp" >
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rate_label" />
+
+    <Spinner
+        android:id="@+id/rate_spinner"
+        android:contentDescription="Select rate"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello" />
+        android:entries="@array/rates_array"
+        android:prompt="@string/rate_label" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nationality_label" />
+
+    <Spinner
+        android:id="@+id/nationality_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Select Nationality"
+        android:entries="@array/nationality_array"
+        android:prompt="@string/rate_label" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/year_label" />
+
+    <EditText
+        android:id="@+id/year_edit_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Enter year" />
+    
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/range_label" />
+
+    <EditText
+        android:id="@+id/range_edit_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Enter Range" />
+    
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:contentDescription="Caluclated base firepower"
+        android:layout_height="wrap_content"
+        android:text="Base firepower: -" 
+        />
+    
 
 </LinearLayout>
