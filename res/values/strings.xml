@@ -7,4 +7,25 @@
     <string name="year_label">Year:</string>
     <string name="range_label">Range:</string>
     
+    <!-- Nationalites -->
+    <string name="british">British</string>
+    <string name="french">French</string>
+    <string name="danish">Danish</string>
+    <string name="spanish">Spanish</string>
+    
+    <!-- Rates -->
+    <string name="rate_1_overgunned">(1)</string>
+    <string name="rate_1">1st</string>
+    <string name="rate_2">2nd</string>
+    <string name="rate_3">3rd</string>
+    <string name="rate_4">4th</string>
+    <string name="rate_5">5th</string>
+    <string name="rate_6">6th</string>
+    <string name="rate_g">G</string>
+    <string name="rate_t">T</string>
+    
+    
+    <!--  hints -->
+    <string name="enter_year_hint">Enter year</string>
+    <string name="enter_range_hint">Enter Range</string>
 </resources>

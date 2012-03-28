@@ -15,7 +15,7 @@
         android:contentDescription="Select rate"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/rates_array"
+       
         android:prompt="@string/rate_label" />
 
     <TextView
@@ -28,8 +28,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:contentDescription="Select Nationality"
-        android:entries="@array/nationality_array"
-        android:prompt="@string/rate_label" />
+        android:prompt="@string/nationality_label"
+         />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +40,8 @@
         android:id="@+id/year_edit_text"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="Enter year" />
+        android:contentDescription="Enter year" 
+        android:hint="@string/enter_year_hint"/>
     
      <TextView
         android:layout_width="wrap_content"
@@ -51,14 +52,19 @@
         android:id="@+id/range_edit_text"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="Enter Range" />
+        android:contentDescription="Enter Range"
+        android:hint="@string/enter_range_hint"
+        android:inputType="number"
+        android:imeOptions="actionGo"
+        />
     
     
     <TextView
         android:layout_width="wrap_content"
+        android:id="@+id/caluclated_base_firepower"
         android:contentDescription="Caluclated base firepower"
         android:layout_height="wrap_content"
-        android:text="Base firepower: -" 
+        android:text="-" 
         />
     
 
