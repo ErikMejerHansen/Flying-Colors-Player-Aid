@@ -11,7 +11,7 @@ Scenario: British 2nd rate ship in 1779
 Scenario: British 1st rate ship in 1779
   Given that Im firing from a "1st" rate "British" ship in "1779"
   And that the range is 2 
-  Then my Base Firepower is "16" 
+  Then my Base Firepower is "14" 
 
 Scenario: French G rate ship in 1826
   Given that Im firing from a "G" rate "French" ship in "1826"
