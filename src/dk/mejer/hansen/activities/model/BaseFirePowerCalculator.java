@@ -4,10 +4,17 @@ public class BaseFirePowerCalculator {
 	private Nationalities nationality;
 	private Rates rate;
 	private int range = 1; //minimum rage is one
+	private boolean isAtFullSails;
+	private boolean isTacking;
+	private boolean isPartialBroadSide;
+	private boolean isRotatingAtAchor;
+	private boolean isDismasted;
+	private boolean isOnFire;
 
 	public int calculateBaseFirepower() {
 		int row = determineRateRow();
-		int unmodifiedBaseFirepower = lookupFirePower(row, range);
+		int modifiedRow = applyRateRowModifiers(row);
+		int unmodifiedBaseFirepower = lookupFirePower(modifiedRow, range);
 		
 		//determinePointBlankModifier
 		//determineCumulativeCarronadeBonus
@@ -16,7 +23,40 @@ public class BaseFirePowerCalculator {
 	}
 
 	
+	private int applyRateRowModifiers(int row) {
+		if(isPartialBroadSide) {
+			row--;
+		}
+		
+		if(isRotatingAtAchor) {
+			row--;
+		}
+		
+		if(isTacking) {
+			row--;
+		}
+		
+		if(isAtFullSails) {
+			row--;
+		}
+		
+		if(isDismasted) {
+			row--;
+		}
+		
+		if(isOnFire) {
+			row--;
+		}
+		
+		return row;
+	}
+
+
 	private int lookupFirePower(int row, int range) {
+		if(row < 0) {
+			return -1;
+		}
+		
 		int[][] firepowerDeterminationTable = {
 				{ 2,  1,  1,  0,  0, -1, -1, -1, -1, -1},
 				{ 3,  2,  2,  1,  0, -1, -1, -1, -1, -1},
@@ -43,13 +83,34 @@ public class BaseFirePowerCalculator {
 
 	public void setRate(Rates rate) {
 		this.rate = rate;
-		
 	}
 	
 	public void setRange(int range) {
 		this.range = range;
-		
+	}
+	
+	public void setIsAtFullSails(boolean fullSails) {
+		this.isAtFullSails = fullSails;
+	}
+	
+	public void setIsTacking(boolean isTacking) {
+		this.isTacking = isTacking;
 	}
 
+	public void setIsPartialBroadside(boolean isPartialBroadSide) {
+		this.isPartialBroadSide = isPartialBroadSide;
+	}
+	
+	public void setIsRotatingAtAnchor(boolean isRotatingAtAchor) {
+		this.isRotatingAtAchor = isRotatingAtAchor;
+	}
+
+	public void setIsDismasted(boolean isDismasted) {
+		this.isDismasted = isDismasted;
+	}
+	
+	public void setIsOnFire(boolean isOnFire) {
+		this.isOnFire = isOnFire;
+	}
 	
 }

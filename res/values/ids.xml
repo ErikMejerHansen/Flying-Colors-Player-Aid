@@ -4,6 +4,7 @@
   <item type="id" name="nationality_changed"/>
   <item type="id" name="rate_changed"/>
   <item type="id" name="range_changed"/>
+  <item type="id" name="rate_modifier_changed"/>
   <item type="id" name="base_firepower_calculated"/>
   
 </resources>
