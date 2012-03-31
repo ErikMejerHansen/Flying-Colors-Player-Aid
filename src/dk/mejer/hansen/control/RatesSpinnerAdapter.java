@@ -14,7 +14,7 @@ public class RatesSpinnerAdapter extends BaseAdapter {
 	RatesSpinnerAdapter(Context context) {
 		this.context = context;
 	}
-	
+
 	public int getCount() {
 		return Rates.values().length;
 	}
@@ -32,6 +32,4 @@ public class RatesSpinnerAdapter extends BaseAdapter {
 		view.setText(context.getText(getItem(position).getStringResourceId()));
 		return view;
 	}
-
-
 }
