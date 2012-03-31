@@ -1,71 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_firepower_scroll"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:padding="4dp" >
+    android:layout_height="fill_parent" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rate_label" />
-
-    <Spinner
-        android:id="@+id/rate_spinner"
-        android:contentDescription="Select rate"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-       
-        android:prompt="@string/rate_label" />
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="4dp" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nationality_label" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rate_label" />
 
-    <Spinner
-        android:id="@+id/nationality_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="Select Nationality"
-        android:prompt="@string/nationality_label"
-         />
+        <Spinner
+            android:id="@+id/rate_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Select rate"
+            android:prompt="@string/rate_label" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/year_label" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nationality_label" />
 
-    <EditText
-        android:id="@+id/year_edit_text"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="Enter year" 
-        android:hint="@string/enter_year_hint"/>
-    
-     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/range_label" />
+        <Spinner
+            android:id="@+id/nationality_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Select Nationality"
+            android:prompt="@string/nationality_label" />
 
-    <EditText
-        android:id="@+id/range_edit_text"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="Enter Range"
-        android:hint="@string/enter_range_hint"
-        android:inputType="number"
-        android:imeOptions="actionGo"
-        />
-    
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/caluclated_base_firepower"
-        android:contentDescription="Caluclated base firepower"
-        android:layout_height="wrap_content"
-        android:text="-" 
-        />
-    
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/year_label" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/year_edit_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Enter year"
+            android:hint="@string/enter_year_hint" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/range_label" />
+
+        <EditText
+            android:id="@+id/range_edit_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Enter Range"
+            android:hint="@string/enter_range_hint"
+            android:imeOptions="actionGo"
+            android:inputType="number" />
+
+        <CheckBox
+            android:id="@+id/partial_broadside_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/partial_broadside" 
+            android:onClick="togglePartialBroadside"/>
+
+        <CheckBox
+            android:id="@+id/rotating_at_anchor_broadside_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rotating_at_anchor"
+            android:onClick="toggleRotatingAtAnchor" />
+
+        <CheckBox
+            android:id="@+id/tacking_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tacking" 
+            android:onClick="toggleTacking"/>
+
+        <CheckBox
+            android:id="@+id/full_sails_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/full_sails"
+            android:onClick="toggleAtFullSails" />
+
+        <CheckBox
+            android:id="@+id/dismasted_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dismasted" 
+            android:onClick="toggleIsDismasted"/>
+
+        <CheckBox
+            android:id="@+id/on_fire_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On fire"
+            android:onClick="toggleIsOnFire" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/base_firepower" />
+
+        <TextView
+            android:id="@+id/caluclated_base_firepower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Caluclated base firepower"
+            android:text="-" />
+    </LinearLayout>
+
+</ScrollView>

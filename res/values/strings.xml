@@ -28,4 +28,10 @@
     <!--  hints -->
     <string name="enter_year_hint">Enter year</string>
     <string name="enter_range_hint">Enter Range</string>
+    <string name="full_sails">Full Sails</string>
+    <string name="tacking">Tacking</string>
+    <string name="partial_broadside">Partial broadside</string>
+    <string name="base_firepower">Base firepower:</string>
+    <string name="rotating_at_anchor">Rotating at anchor</string>
+    <string name="dismasted">Dismasted</string>
 </resources>
