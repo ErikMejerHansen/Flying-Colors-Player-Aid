@@ -14,7 +14,7 @@ public class NationalitesSpinnerAdapter extends BaseAdapter {
 	NationalitesSpinnerAdapter(Context context) {
 		this.context = context;
 	}
-	
+
 	public int getCount() {
 		return Nationalities.values().length;
 	}
@@ -32,6 +32,4 @@ public class NationalitesSpinnerAdapter extends BaseAdapter {
 		view.setText(context.getText(getItem(position).getStringResourceId()));
 		return view;
 	}
-
-
 }
