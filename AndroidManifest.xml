@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dk.mejer.hansen"
+    package="dk.mejer.hansen.flyingcolors"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="8" />
+    <!-- Internet permission only here to enable testing with calabash -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -19,7 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".control.SetupNewGameActivity"/>
+        <activity android:name=".control.OptionsActivity"/>
+        <activity android:name=".control.CalculateBaseFirepowerActivity"/>
     </application>
-    <!-- Internet permission only here to enable testing with calabash -->
 
 </manifest>
