@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flying_colors="http://schemas.android.com/apk/res/dk.mejer.hansen.flyingcolors"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_firepower_scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="4dp" >
+
+        <dk.mejer.hansen.flyingcolors.view.DividerTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            layout="@layout/section_divider"
+            flying_colors:divider_text="@string/select_agressor" />
+
+        <LinearLayout
+            android:id="@+id/calculate_base_firepower_ship_gallery_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/fleur_de_lis" />
+
+        <dk.mejer.hansen.flyingcolors.view.DividerTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/section_divider"
+            flying_colors:divider_text="@string/range" />
+
+        <SeekBar
+            android:id="@+id/calculate_base_firepower_range_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="9"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:progress="5"
+            android:progressDrawable="@drawable/rope_seekbar"
+            android:thumb="@drawable/knot" />
+
+        <TextView
+            android:id="@+id/caluclate_base_firepower_range_seekbar_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:text="5"
+            android:textColor="#ffffff"
+            tools:ignore="HardcodedText" />
+
+        <dk.mejer.hansen.flyingcolors.view.DividerTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/section_divider"
+            flying_colors:divider_text="@string/damage_taken" />
+
+        <SeekBar
+            android:id="@+id/calculate_base_firepower_damage_taken_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/rope_seekbar"
+            android:thumb="@drawable/knot" />
+
+        <TextView
+            android:id="@+id/caluclate_base_firepower_damage_taken_seekbar_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:text="0"
+            android:textColor="#ffffff"
+            tools:ignore="HardcodedText" />
+
+        <dk.mejer.hansen.flyingcolors.view.DividerTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/section_divider"
+            flying_colors:divider_text="@string/modifiers" />
+
+        <CheckBox
+            android:id="@+id/partial_broadside_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="togglePartialBroadside"
+            android:text="@string/partial_broadside" />
+
+        <CheckBox
+            android:id="@+id/rotating_at_anchor_broadside_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toggleRotatingAtAnchor"
+            android:text="@string/rotating_at_anchor" />
+
+        <CheckBox
+            android:id="@+id/tacking_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toggleTacking"
+            android:text="@string/tacking" />
+
+        <CheckBox
+            android:id="@+id/full_sails_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toggleAtFullSails"
+            android:text="@string/full_sails" />
+
+        <CheckBox
+            android:id="@+id/dismasted_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toggleIsDismasted"
+            android:text="@string/dismasted" />
+
+        <CheckBox
+            android:id="@+id/on_fire_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toggleIsOnFire"
+            android:text="@string/on_fire" />
+
+        <dk.mejer.hansen.flyingcolors.view.DividerTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/section_divider"
+            flying_colors:divider_text="@string/base_firepower" />
+
+        <TextView
+            android:id="@+id/caluclated_base_firepower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/caluclated_base_firepower_content_description"
+            android:text="-"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</ScrollView>

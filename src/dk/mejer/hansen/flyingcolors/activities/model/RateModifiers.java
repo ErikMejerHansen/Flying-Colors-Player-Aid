@@ -1,4 +1,4 @@
-package dk.mejer.hansen.activities.model;
+package dk.mejer.hansen.flyingcolors.activities.model;
 
 public enum RateModifiers {
 	Partial_broadside,

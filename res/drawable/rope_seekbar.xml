@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@android:id/background">
+        <bitmap
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:src="@drawable/rope_white"
+            android:tileMode="repeat" />
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <bitmap
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:src="@drawable/rope_white"
+            android:tileMode="repeat" />
+    </item>
+
+</layer-list>

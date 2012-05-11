@@ -1,26 +1,26 @@
-package dk.mejer.hansen.control;
+package dk.mejer.hansen.flyingcolors.control;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import dk.mejer.hansen.activities.model.Nationalities;
+import dk.mejer.hansen.flyingcolors.activities.model.Rates;
 
-public class NationalitesSpinnerAdapter extends BaseAdapter {
+public class RatesSpinnerAdapter extends BaseAdapter {
 
 	private final Context context;
 
-	NationalitesSpinnerAdapter(Context context) {
+	RatesSpinnerAdapter(Context context) {
 		this.context = context;
 	}
 
 	public int getCount() {
-		return Nationalities.values().length;
+		return Rates.values().length;
 	}
 
-	public Nationalities getItem(int position) {
-		return Nationalities.values()[position];
+	public Rates getItem(int position) {
+		return Rates.values()[position];
 	}
 
 	public long getItemId(int position) {

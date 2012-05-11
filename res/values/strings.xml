@@ -6,32 +6,58 @@
     <string name="nationality_label">Nationality:</string>
     <string name="year_label">Year:</string>
     <string name="range_label">Range:</string>
-    
+
     <!-- Nationalites -->
     <string name="british">British</string>
     <string name="french">French</string>
     <string name="danish">Danish</string>
     <string name="spanish">Spanish</string>
-    
+    <string name="dutch">Dutch</string>
+
     <!-- Rates -->
     <string name="rate_1_overgunned">(1)</string>
-    <string name="rate_1">1st</string>
-    <string name="rate_2">2nd</string>
-    <string name="rate_3">3rd</string>
-    <string name="rate_4">4th</string>
-    <string name="rate_5">5th</string>
-    <string name="rate_6">6th</string>
+    <string name="rate_1">1</string>
+    <string name="rate_2">2</string>
+    <string name="rate_3">3</string>
+    <string name="rate_4">4</string>
+    <string name="rate_5">5</string>
+    <string name="rate_6">6</string>
     <string name="rate_g">G</string>
     <string name="rate_t">T</string>
-    
-    
-    <!--  hints -->
     <string name="enter_year_hint">Enter year</string>
     <string name="enter_range_hint">Enter Range</string>
     <string name="full_sails">Full Sails</string>
     <string name="tacking">Tacking</string>
     <string name="partial_broadside">Partial broadside</string>
-    <string name="base_firepower">Base firepower:</string>
+    <string name="base_firepower">Base firepower</string>
     <string name="rotating_at_anchor">Rotating at anchor</string>
     <string name="dismasted">Dismasted</string>
+    <string name="attackers_audacity">Attackers Audacity</string>
+    <string name="audacity">Audacity</string>
+    <string name="on_fire">On fire</string>
+    <string name="square_rate">Square rate</string>
+    <string name="damage_taken">Damage taken</string>
+    <string name="choose_scenario">Choose scenario</string>
+    <string name="participating_nations">Participating nations</string>
+    <string name="british_audacity">British audacity</string>
+    <string name="french_audacity">French audacity</string>
+    <string name="dutch_audacity">Dutch audacity</string>
+    <string name="danish_audacity">Danish audacity</string>
+    <string name="spanish_audacity">Spanish audacity</string>
+    <string name="select_existing_scenario">Select scenario</string>
+    <string name="or_setup_you_own">Or setup you own</string>
+    <string name="select_agressor">Select agressor</string>
+    <string name="fireing_situation">Fireing situation</string>
+    <string name="unset_divider_text">UNDEFINED</string>
+    <string name="range">Range</string>
+    <string name="modifiers">Modifiers</string>
+    <string name="start_game">Start</string>
+    <string name="caluclated_base_firepower_content_description">Caluclated base firepower</string>
+    <string name="new_game">New game</string>
+    <string name="options">Options</string>
+    <string name="initializing_database_">Initializing database…</string>
+    <string name="about">About</string>
+    <string name="keep_screen_on_">Keep screen on?</string>
+    <string name="scenario">Scenario:</string>
+   
 </resources>
