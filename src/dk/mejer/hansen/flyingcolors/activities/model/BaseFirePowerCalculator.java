@@ -3,8 +3,6 @@ package dk.mejer.hansen.flyingcolors.activities.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.util.Log;
-
 public class BaseFirePowerCalculator {
 	private int range = 1; // minimum rage is one
 	private List<RateModifiers> rateRowModifers = new ArrayList<RateModifiers>();
@@ -140,7 +138,6 @@ public class BaseFirePowerCalculator {
 		if(ship.getCurrentRateColor() == RateColors.Red && range > 5) {
 			return -1;
 		}
-		Log.d("FLYINGCOLORS","Row:" + row +  ", Range:" + (range - 1));
 		return firepowerDeterminationTable[row][range - 1]; // Table is base 1
 															// indexed
 	}

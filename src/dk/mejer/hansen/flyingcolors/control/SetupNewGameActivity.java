@@ -5,7 +5,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CursorAdapter;
 import android.widget.SimpleCursorAdapter;
@@ -33,7 +32,6 @@ public class SetupNewGameActivity extends Activity {
 
 	public void startGame(View v) {
 		showProgressDialog();
-		Log.d("FLYINGCOLORS", ((TextView)scenarios.getSelectedView()).getText().toString());
 		new ScenarioDataFetcher().execute(((TextView)scenarios.getSelectedView()).getText().toString());
 	}
 	
@@ -62,7 +60,7 @@ public class SetupNewGameActivity extends Activity {
 	}
 
 	public void startScenario(Scenario scenario) {
-		Intent caluclateBaseFirepowerIntent = new Intent(getApplicationContext(), CalculateBaseFirepowerActivity.class);
+		Intent caluclateBaseFirepowerIntent = new Intent(getApplicationContext(), CalculateFirepowerActivity.class);
 		caluclateBaseFirepowerIntent.putExtra("scenario", scenario);
 		dismissPogressDialog();
 		

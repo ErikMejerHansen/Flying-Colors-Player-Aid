@@ -2,17 +2,16 @@ package dk.mejer.hansen.flyingcolors.control;
 
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import dk.mejer.hansen.flyingcolors.R;
 import dk.mejer.hansen.flyingcolors.activities.model.BaseFirePowerCalculator;
 import dk.mejer.hansen.flyingcolors.activities.model.RateModifiers;
 
-class BaseFirePowerCalculationHandler extends Handler {
+class FirePowerCalculationHandler extends Handler {
 
 	private BaseFirePowerCalculator calcuclator;
-	private final CalculateBaseFirepowerActivity calculateBaseFirepowerActivity;
+	private final CalculateFirepowerActivity calculateBaseFirepowerActivity;
 
-	BaseFirePowerCalculationHandler(CalculateBaseFirepowerActivity calculateBaseFirepowerActivity) {
+	FirePowerCalculationHandler(CalculateFirepowerActivity calculateBaseFirepowerActivity) {
 		this.calculateBaseFirepowerActivity = calculateBaseFirepowerActivity;
 		this.calcuclator = new BaseFirePowerCalculator();
 		this.calcuclator = new BaseFirePowerCalculator();
@@ -39,7 +38,6 @@ class BaseFirePowerCalculationHandler extends Handler {
 			break;
 			
 			case R.id.range_changed:
-				Log.d("FLYINGCOLORS", "Range changed to:" + msg.arg1);
 				calcuclator.setRange(msg.arg1);
 				post(calculateBaseFirepower);
 				break;

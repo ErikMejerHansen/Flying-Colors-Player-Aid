@@ -22,9 +22,9 @@ import dk.mejer.hansen.flyingcolors.activities.model.Scenario;
 import dk.mejer.hansen.flyingcolors.activities.model.Ship;
 import dk.mejer.hansen.flyingcolors.view.LargeShipCounterView;
 
-public class CalculateBaseFirepowerActivity extends Activity {
+public class CalculateFirepowerActivity extends Activity {
 
-	protected BaseFirePowerCalculationHandler baseFirePowerHandler;
+	protected FirePowerCalculationHandler baseFirePowerHandler;
 	private Scenario scenario;
 	private LinearLayout galleryContainer;
 	protected View currentlyHighlightedView;
@@ -37,7 +37,7 @@ public class CalculateBaseFirepowerActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.calculate_base_firepower);
+		setContentView(R.layout.calculate_firepower);
 		findViewById(R.id.base_firepower_scroll).setKeepScreenOn(true);
 		galleryContainer = (LinearLayout) findViewById(R.id.calculate_base_firepower_ship_gallery_container);
 	
@@ -111,6 +111,7 @@ public class CalculateBaseFirepowerActivity extends Activity {
 					LargeShipCounterView shipView = (LargeShipCounterView)view; 
 					shipView.flip();
 					updateDamageSeekbar(shipView.getShip());
+					sendShipUpdatedMessage();
 				}
 			}
 		});
@@ -142,7 +143,7 @@ public class CalculateBaseFirepowerActivity extends Activity {
 		Thread caluclatorThread = new Thread() {
 			public void run() {
 				Looper.prepare();
-				baseFirePowerHandler = new BaseFirePowerCalculationHandler(CalculateBaseFirepowerActivity.this);
+				baseFirePowerHandler = new FirePowerCalculationHandler(CalculateFirepowerActivity.this);
 				Looper.loop();
 			}
 		};

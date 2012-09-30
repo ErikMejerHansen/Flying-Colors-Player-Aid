@@ -22,18 +22,80 @@
             flying_colors:divider_text="@string/options" />
 
         <CheckBox
+            android:id="@+id/options_keep_screen_on_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/keep_screen_on_"
             android:onClick="onKeepScreenOnToggled"
-            android:id="@+id/options_keep_screen_on_checkbox" />
+            android:text="@string/keep_screen_on_" />
 
         <dk.mejer.hansen.flyingcolors.view.DividerTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             layout="@layout/section_divider"
-            flying_colors:divider_text="@string/about" />
-        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Developed by.... source avilabe at github. contact information: mail, twitter google+. Rights resserved by GMT...."/>
+            flying_colors:divider_text="@string/contact" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/feel_free_to_reach_out_with_feedback_"
+            android:textSize="16sp" />
+
+        <TextView
+            style="@style/contactStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/twitter" 
+            android:onClick="onTwitter"
+            android:clickable="true"/>
+
+        <TextView
+            style="@style/contactStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/googleplus"
+            android:onClick="onGooglePlus"
+            android:clickable="true" />
+
+        <TextView
+            style="@style/contactStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mail" 
+            android:onClick="onMail"
+            android:clickable="true"/>
+        
+	  <TextView
+            style="@style/contactStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/source" 
+            android:onClick="onSource"
+            android:clickable="true"/>
+	  
+	  
+        <dk.mejer.hansen.flyingcolors.view.DividerTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/section_divider"
+            flying_colors:divider_text="@string/copyright" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="15dp"
+            android:text="@string/gmt_copyright" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onGMTLogo"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/gmt_logo" />
     </LinearLayout>
 
 </ScrollView>

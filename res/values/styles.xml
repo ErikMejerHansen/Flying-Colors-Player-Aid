@@ -25,4 +25,10 @@
     <style name="styleName">
         <item name="android:background">@drawable/background</item>
     </style>
+    <style name="contactStyle" parent="android:Widget.TextView">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">#0645AD</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>

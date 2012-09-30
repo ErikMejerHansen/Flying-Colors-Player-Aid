@@ -59,5 +59,16 @@
     <string name="about">About</string>
     <string name="keep_screen_on_">Keep screen on?</string>
     <string name="scenario">Scenario:</string>
-   
+    <string name="firepower">Firepower</string>
+    <string name="scenarios">scenarios</string>
+    <string name="_flying_colors_fleet_actions_in_the_age_of_sail_to_which_this_app_is_a_player_aid_for_is_2012_gmt_games_llc_">gmt_copyright</string>
+    <string name="gmt_copyright">\'Flying Colors - Fleet actions in The Age of Sail\' to which this app is a Player Aid for is © 2012 GMT Games, LLC.</string>
+   <string name="contact">Feedback</string>
+   <string name="copyright">Copyright</string>
+   <string name="twitter">Twitter: @erikmejerhansen</string>
+   <string name="googleplus">Google+: +ErikHansen</string>
+   <string name="mail">Mail: erik@mejer-hansen.dk</string>
+   <string name="feel_free_to_reach_out_with_feedback_">Feel free to reach out via:</string>
+   <string name="source">Source code for this app can be found at github</string>
+   <string name="send_mail">Send mail...</string>
 </resources>

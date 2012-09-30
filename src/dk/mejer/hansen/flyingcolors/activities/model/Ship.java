@@ -1,7 +1,6 @@
 package dk.mejer.hansen.flyingcolors.activities.model;
 
 import android.database.Cursor;
-import android.util.Log;
 
 public class Ship {
 
@@ -95,7 +94,6 @@ public class Ship {
 
 	public void flip() {
 		onDamagedSide = !onDamagedSide;
-		Log.d("FlyingColors", "Flipped shop counter. onDamagedSide" + onDamagedSide);
 	}
 
 	public boolean isDamaged() {

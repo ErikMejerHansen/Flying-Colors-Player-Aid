@@ -9,7 +9,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 import dk.mejer.hansen.flyingcolors.activities.model.Nationalities;
 import dk.mejer.hansen.flyingcolors.activities.model.Scenario;
 
@@ -50,7 +49,6 @@ public class ScenarioDataSource {
 	}
 
 	private boolean dataAlreadyLoaded() {
-
 		// TODO: Check the other tables
 		SQLiteDatabase database = dbHelper.getReadableDatabase();
 		Cursor cursor = database.rawQuery("select COUNT(*) from scenarios", null);
@@ -59,18 +57,15 @@ public class ScenarioDataSource {
 		if (cursor.getInt(0) > 0) {
 			cursor.close();
 			database.close();
-
 			return true;
 		} else {
 			cursor.close();
 			database.close();
-
 			return false;
 		}
 	}
 
 	private ContentValues getScenarioValues(String scenarioLine) {
-		Log.d("FlyingColors", "inserting:" + scenarioLine);
 
 		StringTokenizer tokenizer = new StringTokenizer(scenarioLine, ";");
 		ContentValues scenarioValues = new ContentValues();
@@ -140,7 +135,7 @@ public class ScenarioDataSource {
 		SQLiteDatabase database = dbHelper.getReadableDatabase();
 		Scenario scenario = new Scenario(scenarioName);
 		setScenarioData(scenario, database, scenarioName);
-
+		database.close();
 		return scenario;
 	}
 

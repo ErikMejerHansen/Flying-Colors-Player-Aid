@@ -1,0 +1,18 @@
+Feature: Fire power
+  In order to speed up gameplay
+  As a player
+  I want to have the Firepower calculated for me
+
+Scenario: British 2nd rate ship in 1779
+  Then I wait to see "New game"
+  Then I take a screenshot
+  Given I press the "New game" button
+  And I wait to see "Select scenario"
+  Then I take a screenshot
+  Then I select "Trafalgar" from "scenarios"
+  Given I press the "Start" button
+  Then I take a screenshot
+  Then I wait for progress
+  Then I take a screenshot
+  Then I scroll down
+  Then I take a screenshot
